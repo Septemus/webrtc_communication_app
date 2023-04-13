@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+  <script src="adapter-latest.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="webrtc2.js"></script>
+  <title>视频通话界面</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+<link rel="stylesheet" href="./index.css">
+<body background="背景.jpeg" style="background-repeat:no-repeat;background-attachment:fixed;background-size:10% auto;background-position:100% 100%  "></body>
+<body>
+  
+  <video id="remoteVideo" autoplay style="width: 300px;" controls poster="2222.png" ></video>
+  <video id="localVideo" autoplay muted style="width: 300px;" controls poster="2222.png"></video>
+
+  <br />
+  
+  <input type="button" id="start" onclick="start(true)" value="start video"></input><br>
+  <textarea id="content"  ></textarea>
+  <br/>
+  <input  id="sendMsg" type="text"/>
+  <button id="btn_send">发送</button>
+  <script>
+    
+  </script>
+  <script type="text/javascript" src="./getUrlParam.js"></script>
+  <script type="text/javascript">
+    //请求调用摄像头
+    var socket = io();
+    pageReady();
+    var room = UrlParam.param("room");
+    var id = UrlParam.param('id');
+    
+    socket.emit('rooms', JSON.stringify({ 'rooms': room }));
+     socket.on("receiveMsg",function (data) {
+        content.value+=data.client+":"+data.msg+"\r\n";
+      });
+    var content=document.getElementById("content");
+    var sendMsg=document.getElementById("sendMsg");
+    var btn_send=document.getElementById("btn_send");
+    btn_send.addEventListener("click",function () {
+        var data={client:id  ,msg:sendMsg.value};
+      //给服务端发送 sendMsg事件名的消息
+        socket.emit("sendMsg",data);
+      content.value+="id";
+      sendMsg.value="";
+      
+    });
+
+  </script>
+</body>
+
+</html>

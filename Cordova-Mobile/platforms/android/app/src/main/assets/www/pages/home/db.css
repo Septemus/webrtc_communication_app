@@ -1,0 +1,73 @@
+h4/*标题*/ 
+{
+    color:#282b33;
+    letter-spacing: 10px;
+    font-family: 等线;
+    font-size: 25px;
+    text-align:center;
+    margin-bottom: 13px;
+}
+
+
+table/*总表*/
+{
+    /* margin-top: 0px;
+    margin-left: 550px; */
+    margin: auto;
+    width: 70%;
+    /* border-spacing: 20px; */
+    /*border-top: 5px solid #282b33;
+    */
+    border-top:none;
+    border-bottom: none;
+    /* border-left: 1px solid black; */
+    /* border: 1px solid black; */
+    background-color:#009688;
+    color:black;
+    
+}
+th /*列表表头*/
+{
+    font-weight: 900;
+    font-family: 等线;
+    font-size: 10px;
+    border-style: none;
+    /* border: 1px solid black; */
+}
+td /*列表具体元素*/
+{
+    font-weight: 600;
+    font-family: 等线;
+    font-size: 10px;
+    border: 1px solid black;
+    /* border-style: none; */
+    text-align:center;
+}
+tr /*列表创建的行*/
+{
+    width: 70%;
+    /* border-spacing: 15px; */
+    background-color:#009688;
+    
+}
+.out
+{
+display: flex;
+flex-direction: column;
+}
+.inroom
+{
+    /* margin-top: 0px;
+    margin-left: 550px; */
+    margin:auto;
+    width: 70%;
+    /* border-spacing: 20px; */
+    /*border-top: 5px solid #282b33;
+    */
+    border-top:none;
+    border-bottom: none;
+    /* border: 1px solid black; */
+    background-color:#009688;
+    color:black;
+    text-align:center
+}

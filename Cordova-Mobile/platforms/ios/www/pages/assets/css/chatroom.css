@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white;
+    width:100%;
+}
+
+.videos { 
+    width: 100vw;
+    height: 60vh;
+    float: left;
+    display: grid;
+    grid-gap: 5px;
+    grid-auto-flow: row;
+    
+    grid-template-columns: repeat(auto-fit, minmax(var(--colWidth), 1fr)) ;
+}
+
+.videoContainer {
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    min-height: var(--rowHeight);
+    min-width: var(--colWidth);
+    
+}
+
+.videoContainer video {
+
+    position: absolute;
+    left: 0;
+    top:0;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.videoLabel {
+    color: white;
+    font: bold 18px Arial, Sans-Serif;
+    line-height: 18px;
+    height: 18px;
+    
+    background: rgba(0, 0, 0, 0.55);
+    
+    position: absolute;
+    left: 0;
+    padding: 4px;
+}
+
+.chats{
+  width: 100vw;
+  /* height: 100%; */
+  height: 35vh;
+}
+.chats > #content {
+    width: 100%;
+    height: 60%;
+}
+.chats > #sendMsg {
+    /* display: inline-block; */
+    display: block;
+    width:80%;
+    height: 10%;
+    float: left;
+    /* float: left; */
+}
+.chats > #btn_send {
+    /* display: inline-block; */
+    display: block;
+    width:18%;
+    height:10%;
+    /* float: left; */
+    background-color: deepskyblue;
+    float: left;
+}
+.chats > #start {
+    display: block;
+    width: 100%;
+    height:20%;
+    background-color: red;         
+}
+
+.chats > label {
+    width: 100%;
+    height:10%;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+}

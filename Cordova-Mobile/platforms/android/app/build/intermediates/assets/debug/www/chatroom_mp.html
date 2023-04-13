@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create and Join meetings with whiteboard and chat">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./pages/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/6510466b6c.js" crossorigin="anonymous"></script>
+    <script src="cordova.js"></script>
+    <title>局域网通信</title>
+    <script>
+        const params = new URLSearchParams(location.search);
+        var myname;
+        if (params.get("name")) myname = params.get('name');
+    </script>
+    <style>
+        /* .index-navbar-content {
+            font-size: 10px;
+            color:red;
+        } */
+        /* * {
+            margin:0;
+            padding:0;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="index-background">
+        <div class="index-container">
+            <div class="index-navbar">
+                <div class="index-navbar-content">
+                    <img src="./pages/assets/images/favicon.png" alt="" style="width:50px;height:50px;">
+                    <div class="heading-nav" style="font-size: 20px;">多人通信</div>
+                </div>
+                <div class="index-time" style="font-size: 10px;display: block;"></div>
+            </div>
+
+            <div class="main" style="margin: 0;">
+                <div class="video-cont" style="width:100%;margin: 0;margin-bottom: 5px;">
+                    <video class="video-self" autoplay muted playsinline style="height: 200px;"></video>
+                    <div class="settings">
+                        <div class="device" id="mic"><i class="fas fa-microphone"></i></div>
+                        <div class="device" id="webcam"><i class="fas fa-video"></i></div>
+                    </div>
+                </div>
+                <div class="create-join">
+                    <button id="createroom" class="createroom-butt unselectable" style="padding: 0;">Create New Room</button><br>
+                    <div class="text">
+                        <div class="head" style="margin: 0;">Or</div>
+                    </div>
+                    <input type="text" name="room" spellcheck="false" placeholder="Enter Room Code" id="roomcode"
+                        class="roomcode" style="padding: 0;"><br>
+                    <div class="joinroom unselectable" id="joinroom">Join Room</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./pages/assets/js/mpindex.js"></script>
+</body>
+
+</html>

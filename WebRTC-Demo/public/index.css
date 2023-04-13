@@ -1,0 +1,53 @@
+#remoteVideo/*远端视频*/
+{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    
+}
+
+#localVideo/*本地视频*/
+{
+    position: absolute;
+    left: 700px;
+    top: 480px;
+}
+
+#content /*文字显示栏*/
+{
+    position: absolute;
+    left: 1050px;
+    top: 30px;
+    width: 300px;
+    height: 650px;
+}
+#start /*开始视频通话按钮*/
+{
+    position: absolute;
+    left: 1100px;
+    top: 700px;
+    color: rgb(120, 93, 93);
+    text-shadow:1px 1px 1px #333;
+    border-radius: 6px;
+    margin:0 20px 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+#sendMsg  /*文字输入栏*/
+{
+    
+        position: absolute;
+        left: 1050px;
+        top: 680px;
+        width: 200px;
+    
+}
+#btn_send /*文字发送按键*/
+{
+        position: absolute;
+        left: 1250px;
+        top: 680px;
+        width: 100px;
+}
+
+    
